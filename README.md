@@ -22,9 +22,22 @@ Software always runs fine until it doesn't. Often, failing software leaves peopl
 
 Software has its pitfalls even without failing. Answering queries from within the organization easily becomes complex without the proper information and context. This Python module tries to solve these problems by making it easy to add context to your logging. With supplementary in-memory logging where specific logs are written only depending on the state of a context, resulting in smaller log files containing all necessary information in your desired environment.
 
-## design for context
+## Design for Context
+The term "context" refers to the circumstances, conditions, or setting in which something occurs or exists. It provides the background or framework that helps to understand, interpret, or evaluate a particular situation, event, or piece of information. Context is intricately tied to the subscriber and their specific needs, preferences, and circumstances. The term 'subscriber' is used here in the broadest sense, encompassing every person or system interested in the state of certain events in relation to the running software. Therefore it's impossible to tell upfront which context should be in your design.
 
-## Logging principles
+However, each context shares characteristics that are important to understand:
+- id-prefix
+- name
+- description
+- context group
+- state (inactive, started, ended, running, failed, closed)
+- start event
+- end event
+- subscribers
+- loglevel
+- in-memory-log-level
+
+## Logging Principles
 
 ---
 
